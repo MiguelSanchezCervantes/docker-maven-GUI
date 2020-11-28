@@ -19,7 +19,7 @@ driver = new ChromeDriver(option);
 ```
 The chrome option above run the test in chrome without using the GUI.
 
-## Creating the new image
+## Creating the image
 To allow the container to display the browser on the host machine, I used VcXsrv. check this web page to see the details [Run GUI app in linux docker container on windows host](https://dev.to/darksmile92/run-gui-app-in-linux-docker-container-on-windows-host-4kde).
 
 For the base of this image, I used the image in the [open JDK](https://github.com/docker-library/openjdk/blob/master/8/jdk/buster/Dockerfile) repository.
