@@ -38,3 +38,4 @@ set-variable -name DISPLAY -value your-ip-address:0.0
 docker run -ti -v your-maven-project-path:/usr/src -e DISPLAY=$DISPLAY mavenImage
 ```
   
+You can test this image copying the [Dockerfile](Dockerfile) within your project folder or using the [DEMO](src/test/java/com/miguels/chrome/searchTest.java)
