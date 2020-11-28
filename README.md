@@ -11,7 +11,7 @@ Docker image for Java automated GUI tests on windows.
 ## Some context
 This image was created from the necessity of display the google chrome browser from a container on the host machine.
 
-At the begining I was trying to dockerize a maven test with the image in the [markhobson/docker-maven-chrome](https://github.com/markhobson/docker-maven-chrome) repository.
+At the begining I was trying to dockerize a maven test with the image in the [markhobson/docker-maven-chrome](https://github.com/markhobson/docker-maven-chrome/blob/master/jdk-8/Dockerfile) repository.
 This image throws an error when trying to display the browser. You need to use the '--setHeadless' chrome option to avoid this error.
 ```
 ChromeOptions options = new ChromeOptions().setHeadless(true);
@@ -22,9 +22,9 @@ The chrome option above run the test in chrome without using the GUI.
 ## Creating the new image
 To allow the container to display the browser on the host machine, I used VcXsrv. check this web page to see the details [Run GUI app in linux docker container on windows host](https://dev.to/darksmile92/run-gui-app-in-linux-docker-container-on-windows-host-4kde).
 
-for the base of this image, I used the image in the [open JDK](https://github.com/docker-library/openjdk/blob/master/8/jdk/buster/Dockerfile) repository.
+For the base of this image, I used the image in the [open JDK](https://github.com/docker-library/openjdk/blob/master/8/jdk/buster/Dockerfile) repository.
 
-Then added Google Chrome and Chrome Driver. [markhobson/docker-maven-chrome](https://github.com/markhobson/docker-maven-chrome)
+Then added Google Chrome and Chrome Driver. [markhobson/docker-maven-chrome](https://github.com/markhobson/docker-maven-chrome/blob/master/jdk-8/Dockerfile)
 
 Finally added maven. [goyalzz/ubuntu-java-8-maven-docker-image](https://hub.docker.com/r/goyalzz/ubuntu-java-8-maven-docker-image/dockerfile)
 
