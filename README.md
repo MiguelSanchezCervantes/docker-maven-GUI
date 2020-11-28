@@ -9,7 +9,7 @@ Docker image for Java automated GUI tests on windows.
 * Chrome Driver 87.0.4280.20
 
 ## Some context
-This image was created from the necesity of display the google chrome browser from a container on the host machine.
+This image was created from the necessity of display the google chrome browser from a container on the host machine.
 
 At the begining I was trying to dockerize a maven test with the image in the [markhobson/docker-maven-chrome](https://github.com/markhobson/docker-maven-chrome) repository.
 This image throws an error when trying to display the browser. You need to use the '--setHeadless' chrome option o avoid this error.
