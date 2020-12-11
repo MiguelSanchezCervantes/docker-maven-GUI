@@ -110,7 +110,7 @@ RUN set -eux; \
 
 # Google Chrome
 
-ARG CHROME_VERSION=87.0.4280.66-1
+ARG CHROME_VERSION=87.0.4280.88-1
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
 	&& echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
 	&& apt-get update -qqy \
@@ -141,4 +141,4 @@ ENV MAVEN_HOME /opt/maven
 
 WORKDIR /usr/src
 
-CMD ["mvn","verify"]
+CMD ["mvn","package"]
